@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+  
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <div class="cards-bg space-y-6 flex flex-col uppercase tracking-wider text-[#ffffff]">
+      <div class="front-card translate-x-8 translate-y-4">
+        <img src="./images/bg-card-front.png" alt="" class="relative">
+        <img src="./images/card-logo.svg" class="absolute top-4 left-8 ">
+        <h1 id="output-number" class="absolute right-4 left-8 bottom-14 text-2xl ">9591 6489 6389 101E</h1>
+        <div class="flex">
+          <p id="output-name" class=" absolute bottom-4 left-8">felicica leire</p>
+          <p id="" class=" absolute bottom-4 right-8"><span id="output-month">09</span>/<span id="output-year">00</span></p>
+        </div>
+      </div>
+      <div class="back-card translate-x-20 translate-y-4">
+        <img src="./images/bg-card-back.png" class="relative">
+        <p id="output-cvc" class="absolute top-20 right-10">000</p>
+      </div>
+    </div>
+
+    <div class="input-details w-full uppercase">
+      <form class="w-1/2  flex flex-col items-center mx-auto justify-center px-20">
+        <div class="mb-5 w-full ">
+          <label for="input-name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">cardholder name</label>
+          <input type="text" id="input-name" class="border border-gray-300 w-full text-gray-900 text-sm rounded-lg focus:ring-[#8e8593] focus:border-[#8e8593] block w-full p-2.5"  required />
+        </div>
+        <div class="mb-5 w-full">
+          <label for="input-number" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">card number</label>
+          <input type="text" id="input-number" class="border border-gray-300 w-full text-gray-900 text-sm rounded-lg focus:ring-[#8e8593] focus:border-[#8e8593] block w-full p-2.5" maxlength="19" required />
+          <p class="color-[#ff5252] extrabold hidden text-[0.4rem]">Wrong format, numbers only</p>
+
+        </div>   
+        <div class="flex justify-center">
+          <div class="mb-5">
+            <label for="date" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Exp. date (mm/yy)</label>
+            <div class="flex items-center">
+              <input type="number" id="input-month" class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#8e8593] focus:border-[#8e8593] block w-[4rem] p-2.5"  maxlength="2" required/>
+              <input type="number" id="input-year" class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#8e8593] focus:border-[#8e8593] block w-[4rem] p-2.5 mx-3" maxlength="2" required />
+            </div>
+          </div>
+          <div>
+            <label for="cv" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">cv</label>
+            <input type="number" id="input-cvc" class="border border-gray-300 text-gray-900 text-sm w-32 rounded-lg focus:ring-[#8e8593] focus:border-[#8e8593] block p-2.5" maxlength="3" required />
+          </div>
+
+        </div>
+       
+        <button type="submit" class="text-white bg-[#21092f] focus:ring-4 focus:outline-none font-medium rounded-lg text-sm w-full sm:w-full px-5 py-2.5 text-center">Confirm</button>
+      </form>
+    </div>
+  </main>
+  
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="script.js"></script>
+</body>
+</html>
